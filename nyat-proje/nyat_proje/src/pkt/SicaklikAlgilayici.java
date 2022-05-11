@@ -7,12 +7,15 @@ public class SicaklikAlgilayici implements ISicaklikAlgilayici{
     private int sicaklik_olcumu;
     private ISubject publisher;
     private Random random;
+    //Dependency Inversion:bağımlılıgın azaltılması ve interfaceler uzerınden işlem yapma
 
     public SicaklikAlgilayici(ISubject publisher){
         ekran=new Ekran();
         random =new Random();
         this.publisher=publisher;
     }
+
+
     @Override
     public void kullaniciEkle(IObserver kullanici){
         publisher.attach(kullanici);

@@ -12,7 +12,7 @@ public class Veritabani {
 
     static final String DB_URL = "jdbc:postgresql://localhost/nyat_proje";
     static final String USER = "postgres";
-    static final String PASS = "gulcann";
+    static final String PASS = "1234";
     static final String QUERY = "SELECT kullaniciadi, sifre FROM kullanici";
 
     public Veritabani() { //constructor

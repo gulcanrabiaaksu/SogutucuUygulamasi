@@ -1,5 +1,6 @@
 package pkt;
-
+//gözlemcilerin kaydedilmesi,çıkartılması ve istemcideki değişikliklerin
+// gözlemcilere gönderilmesinden sorumlu sınıftır.
 public interface ISubject {
 
     void attach(IObserver observer);

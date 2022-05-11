@@ -22,7 +22,7 @@ public class AgArayuzu {
     public AgArayuzu() { //constructor
         anaIslemPlatformu = new AnaIslemPlatformu();
         veritabani=new Veritabani();
-        ekran=new Ekran();
+        ekran=Factory.ekran();  //FACTORY METHOD
     }
     public void basla() throws InterruptedException {
         //kullanıcı dogrulama

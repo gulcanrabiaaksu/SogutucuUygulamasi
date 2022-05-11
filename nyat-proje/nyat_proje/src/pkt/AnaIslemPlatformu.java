@@ -7,15 +7,15 @@ public class AnaIslemPlatformu {
 
     public AnaIslemPlatformu() { //constructor
 
-        //Dependency Inversion:bağımlılıgın azaltılması ve interfaceler uzerınden işlem yapma
-        eyleyici= new Eyleyici();
+        eyleyici=Factory.eyleyici();  //FACTORY METHOD
         sicaklikAlgilayici=new SicaklikAlgilayici(new Publisher());
 
         //kullanıcı ekleme
-        IObserver kullanici1 =new Kullanici1();
+        IObserver kullanici1 =Factory.observer();  //factory method
         sicaklikAlgilayici.kullaniciEkle(kullanici1);
-        IObserver kullanici2 =new Kullanici2();
+        IObserver kullanici2 =Factory.observer2();  //factory method
         sicaklikAlgilayici.kullaniciEkle(kullanici2);
+
     }
     public void sicaklikOku()  {
         sicaklikAlgilayici.sicaklikGonder();
